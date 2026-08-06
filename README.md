@@ -1,33 +1,24 @@
 # homebrew-anonymizer
 
-Homebrew tap for **[anonymizer](https://github.com/arcane-tl/anonymizer)** — local CLI that turns PDF/DOCX/text into anonymized Markdown (English + Finnish).
+Homebrew tap for **[Anonymizer](https://github.com/arcane-tl/anonymizer)**.
 
-## Install
+| Install | Result |
+|---------|--------|
+| `brew install anonymizer` | CLI: **`anonymize`** |
+| `brew install --cask anonymizer` | App: **`Anonymizer.app`** in `/Applications` |
+
+## Full Mac setup
 
 ```bash
 brew tap arcane-tl/anonymizer
 brew install anonymizer
+brew install --cask anonymizer
 
 anonymize doctor
-anonymize --version
 ```
 
-## Upgrade / uninstall
+Same product name throughout — not “anonymizer-app”.
 
-```bash
-brew update && brew upgrade anonymizer
-brew uninstall anonymizer
-```
+## Source
 
-## Source formula
-
-The formula is maintained in the main project:
-
-- https://github.com/arcane-tl/anonymizer/blob/main/packaging/homebrew/anonymizer.rb
-
-This tap mirrors that file for `brew tap arcane-tl/anonymizer`.
-
-## Docs
-
-- Project README: https://github.com/arcane-tl/anonymizer
-- Homebrew notes: https://github.com/arcane-tl/anonymizer/blob/main/packaging/homebrew/README.md
+- Formula / cask sources: https://github.com/arcane-tl/anonymizer/tree/main/packaging/homebrew
