@@ -10,12 +10,21 @@ Homebrew tap for **[Anonymizer](https://github.com/arcane-tl/anonymizer)**.
 ## Full Mac setup
 
 ```bash
+# Required: third-party tap (not in official homebrew/cask)
 brew tap arcane-tl/anonymizer
 brew install anonymizer
 brew install --cask anonymizer
 
 anonymize doctor
 ```
+
+**Auto-tap one-liner** (if you forget `brew tap`):
+
+```bash
+brew install --cask arcane-tl/anonymizer/anonymizer
+```
+
+If you see `No Cask with this name exists`, you skipped the tap — use one of the blocks above.
 
 Same product name throughout — not “anonymizer-app”.
 
