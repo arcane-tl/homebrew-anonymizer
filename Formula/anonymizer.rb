@@ -16,9 +16,9 @@ class Anonymizer < Formula
   homepage "https://github.com/arcane-tl/anonymizer"
   license "MIT"
 
-  url "https://github.com/arcane-tl/anonymizer/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "e99bcae63411e34553937f8f463f05a52283ad1c9278b72614e9e90cf022c0e6"
-  version "1.1.0"
+  url "https://github.com/arcane-tl/anonymizer/archive/refs/tags/v1.1.1.tar.gz"
+  sha256 "45d9a5bc6f911d3628c0ef2c916c6d91726c8ba44c490da3f0eb5f07930f76da"
+  version "1.1.1"
 
   head "https://github.com/arcane-tl/anonymizer.git", branch: "main"
 
@@ -51,16 +51,25 @@ class Anonymizer < Formula
       Product: Anonymizer
       CLI command: anonymize
 
+      Install full product (CLI + app):
+        brew install --cask anonymizer
+
+      Upgrade CLI and app separately (same name, two packages):
+        brew update
+        brew upgrade anonymizer
+        brew upgrade --cask anonymizer
+
+      If `anonymize` is missing after upgrade:
+        brew link --overwrite anonymizer && hash -r
+      Ensure $(brew --prefix)/bin is on your PATH.
+
+      If `anonymize` is shadowed by ~/.local/bin:
+        brew link --overwrite anonymizer
+        # or put Homebrew first on PATH
+
       Verify:
         anonymize doctor
         anonymize --version
-
-      Drag-and-drop app (same product, opens in Applications):
-        brew install --cask anonymizer
-      → /Applications/Anonymizer.app
-
-      If `anonymize` is shadowed by ~/.local/bin, put Homebrew first on PATH or:
-        brew link --overwrite anonymizer
 
       spaCy models (default): en_core_web_sm, fi_core_news_sm
       Larger models:
